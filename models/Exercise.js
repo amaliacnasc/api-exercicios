@@ -6,8 +6,8 @@ const exerciseSchema = new mongoose.Schema({
     duration:{type:String, required:true}, 
     description:{type:String, required: false}, 
     photo:{type:String, required:false}, 
-    userID:{type:mongoose.Schema.Types.ObjectId, ref: 'User', required:true
-    }
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    
 }, 
 {timestamps:true}); 
 
