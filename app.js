@@ -36,7 +36,7 @@ app.use('/api/exercises', exerciseRoutes);
 
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 // Iniciar o servidor
 app.listen(PORT, () => {
