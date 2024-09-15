@@ -23,12 +23,14 @@ exports.getExerciseById = async (req, res) => {
 };
 
 exports.createExercise = async (req, res) => {
+  console.log(req.body);
   try {
     const exercise = new Exercise(req.body);
     await exercise.save();
-    res.status(201).json(exercise);
+    return res.status(201).json(exercise);
+ 
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    return res.status(400).json({ error: error.message });
   }
 };
 
